@@ -9,7 +9,7 @@ public class Main {
         //System.out.println(mykdaRecords.getRows());
 
         mykdaRecords.insertGameStats(new kda(3, 3, 3));
-        System.out.println(mykdaRecords.getRows());
+        System.out.println(mykdaRecords.toString());
     
     }
 }

@@ -28,4 +28,9 @@ public class kda {
     public Integer getAssists(){
         return assists;
     }
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return  " Assists: "+assists+"; Kills: "+kills+"; Deaths : "+deaths;
+    }
 }

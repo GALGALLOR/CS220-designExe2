@@ -28,13 +28,19 @@ public class kdaRecords {
             Set<kda> matchingNames = new HashSet<>();
             // I am going to getRows in form of string for user readability for now
             for (Map.Entry<Integer, kda> entry : myRecords.entrySet()) {
-               System.out.println("Game "+ entry.getKey()+"; Assists: "+ entry.getValue().getAssists()+ "; Kills: "+ entry.getValue().getKills()+ "; Deaths : "+entry.getValue().getDeaths()+ "\n");
                matchingNames.add(entry.getValue());
             }
-            //Not added to the rows, but mentioned as a total; the Total
-            System.out.println("All Time Stats ; Assists: "+ allTimekda.getAssists()+ "; Kills: "+ allTimekda.getKills()+ "; Deaths : "+allTimekda.getDeaths()+ "\n");
-
             return matchingNames;
+    }
+    @Override
+    public String toString() {
+        String myString="";
+        for (Map.Entry<Integer, kda> entry : myRecords.entrySet()) {
+            myString=myString+"Game "+entry.getKey()+": " + entry.getValue().toString()+"\n";
+         }
+        myString+="All Time Stats ; Assists: "+ allTimekda.getAssists()+ "; Kills: "+ allTimekda.getKills()+ "; Deaths : "+allTimekda.getDeaths()+ "\n";
+
+        return myString;
     }
     
 
